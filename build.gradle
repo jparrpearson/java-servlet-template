@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+version = '1.0'
+war {
+    manifest {
+        attributes('Implementation-Title': 'Servlet Template',
+            'Implementation-Version': version)
+    }
+}
+
+jettyRun {
+    httpPort 8080
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
+    testCompile 'junit:junit:4.12'
+}
+
+// Fetch the needed runtime libraries and put in the lib directory
+task prepare(type: Copy) {
+  from configurations.runtime
+  into 'lib'
+}
