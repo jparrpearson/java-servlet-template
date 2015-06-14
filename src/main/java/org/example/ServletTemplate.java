@@ -9,17 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name="ServletTemplate", urlPatterns = "/template")
+@WebServlet(name = "ServletTemplate", urlPatterns = "/template")
 public class ServletTemplate extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws IOException, ServletException {
         PrintWriter out = res.getWriter();
         out.println("GET response");
     }
 
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws IOException, ServletException {
         PrintWriter out = res.getWriter();

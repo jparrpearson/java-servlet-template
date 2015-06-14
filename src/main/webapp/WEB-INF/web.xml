@@ -8,7 +8,6 @@
         <servlet-name>ServletTemplate</servlet-name>
         <servlet-class>org.example.ServletTemplate</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>ServletTemplate</servlet-name>
         <url-pattern>/template</url-pattern>

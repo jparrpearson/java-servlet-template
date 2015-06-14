@@ -55,14 +55,14 @@ Note that the WAR `manifest` properties can be set under the `build.gradle` file
 
 ### Deploy with Jetty
 
-Deploy the generated WAR file to a Jetty container:
+Deploy the exploded web application to a Jetty container:
 ```
 gradle jettyRun
 ```
 
 Or generate the WAR and deploy to a Jetty container:
 ```
-gradle jettyWarRun
+gradle jettyRunWar
 ```
 
 Note that the `httpPort` can be set under the `build.gradle` file.
