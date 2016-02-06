@@ -4,6 +4,10 @@
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
 
+    <listener>
+        <listener-class>org.example.ListenerTemplate</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>ServletTemplate</servlet-name>
         <servlet-class>org.example.ServletTemplate</servlet-class>

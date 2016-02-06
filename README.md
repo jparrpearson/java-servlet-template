@@ -10,6 +10,9 @@ The following resources should be changed when using this template to create a n
 * `src/main/java/org/example/ServletTemplate.java`
   * Change the class name (filename and in class)
   * Implement servlet methods as required
+* `src/main/java/org/example/ListenerTemplate.java`
+  * Change the class name (filename and in class)
+  * Implement context listener methods as required
 * `src/main/test/org/example/ServletTemplateTest.java`
   * Change the class name (filename and in class)
   * Implement tests as required
