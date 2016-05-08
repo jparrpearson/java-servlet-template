@@ -4,16 +4,6 @@ apply plugin: 'war'
 apply plugin: 'jetty'
 
 version = '1.0'
-war {
-    manifest {
-        attributes('Implementation-Title': 'Servlet Template',
-            'Implementation-Version': version)
-    }
-}
-
-jettyRun {
-    httpPort 8080
-}
 
 repositories {
     jcenter()
@@ -24,8 +14,21 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-// Fetch the needed runtime libraries and put in the lib directory
+war {
+    manifest {
+        attributes('Implementation-Title': 'Servlet Template',
+            'Implementation-Version': version,
+            'Implementation-Vendor': 'Jeremy Parr-Pearson',
+            'Build-Time': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"))
+    }
+}
+
+jettyRun {
+    httpPort 8080
+}
+
 task prepare(type: Copy) {
-  from configurations.runtime
-  into 'lib'
+    description 'Fetches the needed runtime libraries and puts them in the lib directory.'
+    from configurations.runtime
+    into 'lib'
 }

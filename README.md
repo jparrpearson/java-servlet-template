@@ -72,6 +72,6 @@ Note that the `httpPort` can be set under the `build.gradle` file.
 
 ## License
 
-Copyright (c) 2015 Jeremy Parr-Pearson
+Copyright (c) 2016 Jeremy Parr-Pearson
 
 The MIT License (MIT)

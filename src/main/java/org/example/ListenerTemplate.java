@@ -6,6 +6,12 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
+/**
+ * Example context listener.
+ * 
+ * @author Jeremy Parr-Pearson
+ *
+ */
 @WebListener
 public class ListenerTemplate implements ServletContextListener {
 

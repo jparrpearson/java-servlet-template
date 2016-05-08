@@ -9,6 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Example servlet.
+ * 
+ * @author Jeremy Parr-Pearson
+ *
+ */
 @WebServlet(name = "ServletTemplate", urlPatterns = "/template")
 public class ServletTemplate extends HttpServlet {
 

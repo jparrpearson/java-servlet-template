@@ -6,5 +6,5 @@
     <classpathentry kind="src" path="src/main/java"/>
     <classpathentry kind="src" path="src/test/java"/>
     <classpathentry kind="lib" path="lib/javax.servlet-api-3.0.1.jar"/>
-    <classpathentry kind="output" path="build/eclipse"/>
+    <classpathentry kind="output" path="build/main/classes"/>
 </classpath>
