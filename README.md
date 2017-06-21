@@ -22,7 +22,7 @@ Generate the WAR file:
 gradle war
 ```
 
-The WAR file can then be found under the `build/libs` folder.
+The WAR file can then be found under the `build/libs` folder.  Either deploy to a web container or use the Jetty Gradle tasks to run it locally.
 
 ### Deploy with Jetty
 
