@@ -1,8 +1,9 @@
 # Ignore build files
-/.gradle
-/build
+/.gradle/
+/bin/
+/build/
 
 # Ignore IDE files
-/.settings
-.classpath
-.project
+/.settings/
+/.classpath
+/.project
