@@ -1,60 +1,28 @@
 # java-servlet-template
 
-This is a simple Java Servlet template used to quickly create a new servlet.
-
-## Configuration
-
-The following resources should be changed when using this template to create a new servlet:
-
-**Servlet**
-* `src/main/java/org/example/ServletTemplate.java`
-  * Change the class name (filename and in class)
-  * Implement servlet methods as required
-* `src/main/java/org/example/ListenerTemplate.java`
-  * Change the class name (filename and in class)
-  * Implement context listener methods as required
-* `src/main/test/org/example/ServletTemplateTest.java`
-  * Change the class name (filename and in class)
-  * Implement tests as required
-* `src/main/webapp/WEB-INF/web.xml`
-  * Change the servlet name and class
-  * Change the servlet URL pattern
-
-Note that changes in the `web.xml` file will override the annotation values in the servlet class.
-
-**Gradle**
-* `build.gradle`
-  * Change the application `version`
-  * Change the manifest properties (`Implementation-Title`, etc)
-  * Add any applicable library dependencies
-* `settings.gradle`
-  * Change the project name
-
-**Eclipse**
-* `.project`
-  * Change the project name
-* `.classpath`
-  * Add any applicable libraries
+This is a simple Java servlet template used to quickly create a new servlet.  In addition to an example servlet, it also contains an example filter and context listener.
 
 ## Build
 
 This project uses [Gradle](http://gradle.org/), and the following tasks assume that it is already installed.
 
-### Resolve Dependencies
+### Generate Eclipse Artifacts
 
-Resolve dependencies and place them in the `lib` folder (ensure that all needed dependencies are also listed in the `.classpath` file, and run this task before opening the project in Eclipse):
+Download dependencies and create the Eclipse artifacts:
 ```
-gradle prepare
+gradle eclipse
 ```
+
+The project can now be imported in Eclipse to continue development.
 
 ### Build the WAR
 
-Generate the WAR file (can then be found under the `build/libs` folder):
+Generate the WAR file:
 ```
 gradle war
 ```
 
-Note that the WAR `manifest` properties can be set under the `build.gradle` file.
+The WAR file can then be found under the `build/libs` folder.
 
 ### Deploy with Jetty
 
@@ -68,10 +36,13 @@ Or generate the WAR and deploy to a Jetty container:
 gradle jettyRunWar
 ```
 
-Note that the `httpPort` can be set under the `build.gradle` file.
+The servlet can now be accessed at the following address:
+```
+http://localhost:8080/java-servlet-template/template
+```
 
 ## License
 
-Copyright (c) 2016 Jeremy Parr-Pearson
+Copyright (c) 2017 Jeremy Parr-Pearson
 
 The MIT License (MIT)

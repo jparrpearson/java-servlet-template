@@ -8,9 +8,30 @@
         <listener-class>org.example.ListenerTemplate</listener-class>
     </listener>
 
+    <filter>
+        <filter-name>FilterTemplate</filter-name>
+        <filter-class>org.example.FilterTemplate</filter-class>
+        <init-param>
+            <param-name>headerName</param-name>
+            <param-value>X-EXAMPLE</param-value>
+        </init-param>
+        <init-param>
+            <param-name>headerValue</param-name>
+            <param-value>This is an example</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterTemplate</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <servlet>
         <servlet-name>ServletTemplate</servlet-name>
         <servlet-class>org.example.ServletTemplate</servlet-class>
+        <init-param>
+            <param-name>responseText</param-name>
+            <param-value>Example servlet response</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletTemplate</servlet-name>
